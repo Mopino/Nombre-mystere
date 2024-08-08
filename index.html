@@ -13,6 +13,22 @@
     <body>
         <label for="number">Devine le chiffre</label>
 		<input type="number" name="number" id="number">
-		<button name="button" id="button" onclick="checkGuess ()">Proposer</button>
+		
+		<button name="btncheck" id="btncheck" onclick="checkGuess()">Proposer</button>
+		
+		<button name="btnDifficultyModal" id="btnDifficultyModal" onclick="displayDifficulty()">Difficulté</button>
+
+		<span id="msgPlus">C'est plus grand.</span>
+		<span id="msgMoins">C'est plus petit.</span>
+		<span id="msgEgal">GG !</span>
+
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<p>Avec quelle difficulté veux-tu jouer ?</p>
+				<button name="btnChose" class="btnDifficulty" id="btnEZ" onclick="init()">Facile</button>
+				<button name="btnChose" class="btnDifficulty" id="btnMedium" onclick="init()">Moyen</button>
+				<button name="btnChose" class="btnDifficulty" id="btnHard" onclick="init()">Difficile</button>
+			</div>
+		</div>
     </body>
 </html>
