@@ -4,9 +4,7 @@ var modal = document.getElementById("modal")
 var btnEZ = document.getElementById("btnEZ")
 var btnMedium = document.getElementById("btnMedium")
 var btnHard = document.getElementById("btnHard")
-var msgPlus = document.getElementById("msgPlus")
-var msgMoins = document.getElementById("msgMoins")
-var msgEgal = document.getElementById("msgEgal")
+var msg = document.getElementById("msg")
 
 function displayDifficulty() {
     modal.style.display = "block"
@@ -20,40 +18,39 @@ window.onclick = function(event) {
 } 
 
 function getRandomEZ (){
+    console.log("EZ");
     return Math.floor(Math.random() * (9));
 }
 function getRandomMedium (){
+    console.log("Med");
     return Math.floor(Math.random() * (99));
 }
 function getRandomHard (){
+    console.log("Hard");
     return Math.floor(Math.random() * (999));
 }
 
-function getRandom (){
-    if (btnEZ){
-        RNG = getRandomEZ ()
-    } else if (btnMedium){
+function getRandom (lv){
+    if (lv == 2){
         RNG = getRandomMedium ()
-    }else if (btnHard){
+    }else if (lv == 3){
         RNG = getRandomHard ()
+    }else {
+        RNG = getRandomEZ ()
     }
+    console.log(RNG)
     modal.style.display = "none"
 }
 
-function init (){
-    RNG = getRandom()
-}
-
 function checkGuess (){
+    console.log("Oui");
     if (guess.value == RNG){
-        msgPlus.style.display = "flex"
+        msg.innerText = "GG !"
     } else if (guess.value < RNG){
-        msgMoins.style.display = "flex"
+        msg.innerText = "C'est plus grand."
     } else if (guess.value > RNG){
-        msgEgal.style.display = "flex"
+        msg.innerText = "C'est plus petit."
     }
 }
 
-console.log(RNG)
 displayDifficulty()
-// init()

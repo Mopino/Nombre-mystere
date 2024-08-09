@@ -18,10 +18,6 @@ input {
     border-radius: 5px;
 }
 
-span {
-    display: none;
-}
-
 .modal {
     display: none;
     position: fixed;
