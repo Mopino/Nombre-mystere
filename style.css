@@ -18,7 +18,7 @@ input {
     border-radius: 5px;
 }
 
-.modal {
+.modal, .endgame {
     display: none;
     position: fixed;
     z-index: 1;
