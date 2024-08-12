@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
 }
 
 body {
@@ -16,6 +18,8 @@ input {
     margin: 5px;
     padding: 5px;
     border-radius: 5px;
+    background-color: skyblue;
+    border: 1px solid darkblue;
 }
 
 .modal, .endgame {
@@ -35,7 +39,7 @@ input {
     background-color: lightskyblue;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid blue;
+    border: 1px solid darkblue;
     border-radius: 25px;
     width: 20%;
     display: flex;
@@ -45,4 +49,12 @@ input {
 }
 button {
     margin: 5px;
+    background-color: turquoise;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: aqua;
+    transform: scale(1.1);
 }
