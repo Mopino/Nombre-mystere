@@ -6,7 +6,6 @@ var btnMedium = document.getElementById("btnMedium")
 var btnHard = document.getElementById("btnHard")
 var msg = document.getElementById("msg")
 var GG = document.getElementById("GG")
-var x = null
 var RNG = 0
 
 function displayDifficulty() {
@@ -27,7 +26,6 @@ function getRandom (x){
 }
 
 function lv (lv){
-    RNG = getRandom (x)
     if (lv == 2){
         x = 99
     }else if (lv == 3){
@@ -35,6 +33,7 @@ function lv (lv){
     }else {
         x = 9
     }
+    RNG = getRandom (x)
     console.log(RNG)
     modal.style.display = "none"
 }
