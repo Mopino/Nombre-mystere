@@ -1,12 +1,8 @@
 var guess = document.getElementById ("number")
 var modal = document.getElementById("modal")
 var endgame = document.getElementById("endgame")
-var btnEZ = document.getElementById("btnEZ")
-var btnMedium = document.getElementById("btnMedium")
-var btnHard = document.getElementById("btnHard")
 var msg = document.getElementById("msg")
 var GG = document.getElementById("GG")
-var RNG = 0
 
 function displayDifficulty() {
     modal.style.display = "block"
