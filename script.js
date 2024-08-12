@@ -1,5 +1,4 @@
 var guess = document.getElementById ("number")
-var RNG = 0
 var modal = document.getElementById("modal")
 var endgame = document.getElementById("endgame")
 var btnEZ = document.getElementById("btnEZ")
@@ -7,6 +6,8 @@ var btnMedium = document.getElementById("btnMedium")
 var btnHard = document.getElementById("btnHard")
 var msg = document.getElementById("msg")
 var GG = document.getElementById("GG")
+var x = null
+var RNG = 0
 
 function displayDifficulty() {
     modal.style.display = "block"
@@ -20,26 +21,19 @@ window.onclick = function(event) {
     }
 } 
 
-function getRandomEZ (){
-    console.log("EZ");
-    return Math.floor(Math.random() * (9))
-}
-function getRandomMedium (){
-    console.log("Med");
-    return Math.floor(Math.random() * (99))
-}
-function getRandomHard (){
-    console.log("Hard");
-    return Math.floor(Math.random() * (999))
+function getRandom (x){
+    console.log("OK");
+    return Math.floor(Math.random () * (x))
 }
 
-function getRandom (lv){
+function lv (lv){
+    RNG = getRandom (x)
     if (lv == 2){
-        RNG = getRandomMedium ()
+        x = 99
     }else if (lv == 3){
-        RNG = getRandomHard ()
+        x = 999
     }else {
-        RNG = getRandomEZ ()
+        x = 9
     }
     console.log(RNG)
     modal.style.display = "none"
